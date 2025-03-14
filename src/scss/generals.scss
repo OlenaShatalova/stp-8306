@@ -1,0 +1,58 @@
+html {
+  scroll-padding-top: 54px;
+  scroll-behavior: smooth;
+
+  @include media(desktop) {
+    scroll-padding-top: 88px;
+  }
+}
+
+body {
+  width: 320px;
+  margin-inline: auto;
+
+  @include media(desktop) {
+    width: 1200px;
+  }
+}
+
+main {
+  width: 100%;
+  padding-inline: 16px;
+
+  @include media(desktop) {
+    padding-inline: 60px;
+  }
+}
+
+.section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include media(desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.title {
+  display: inline-block;
+  margin-bottom: 24px;
+  padding: 8px 16px;
+  background-color: $_dark_blue;
+  border-radius: 8px;
+  border: 2px solid #f5b000;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: start;
+  margin-bottom: 24px;
+  color: $_light_yellow;
+  text-shadow: -2px -2px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+
+  @include media(desktop) {
+    margin-bottom: 32px;
+    font-size: 36px;
+    font-weight: 400;
+  }
+}
