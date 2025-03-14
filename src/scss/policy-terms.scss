@@ -74,3 +74,25 @@
   color: $_light-blue;
   text-decoration: none;
 }
+
+.cookie-list {
+  gap: 16px;
+}
+
+.cookie-list-text {
+  margin-left: -18px;
+}
+
+br {
+  display: block;
+  margin-bottom: 16px;
+  content: '';
+}
+
+.cookie-link {
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  display: inline;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}

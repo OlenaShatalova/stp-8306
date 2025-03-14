@@ -3,13 +3,14 @@
   top: 0;
   z-index: 3;
   background-color: $_main_bg-color;
-  width: 100%;
+  width: 320px;
   padding-top: 32px;
   padding-inline: 16px;
   padding-bottom: 16px;
 
   @include media(desktop) {
     padding-inline: 60px;
+    width: 1200px;
   }
 }
 
