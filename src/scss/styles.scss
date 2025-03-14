@@ -8,12 +8,13 @@
 @import './reviews.scss';
 @import './footer.scss';
 @import './mob-menu.scss';
+@import './cookie.scss';
 @import './generals.scss';
 
 :root {
   font-family: Roboto, Inter, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: normal;
   font-weight: 400;
 
   color: $_main-color;
