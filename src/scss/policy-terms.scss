@@ -53,9 +53,16 @@
   list-style-type: disc;
   padding-left: 19px;
 }
+
 .policy-list-item {
   padding-left: 5px;
 }
+
 .policy-list-item::marker {
   font-size: 10px;
+}
+
+.policy-link:hover {
+  // color: $_light-blue;
+  text-decoration: underline;
 }
