@@ -1,0 +1,25 @@
+.minimal-header {
+  padding-top: 32px;
+  padding-inline: 16px;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  text-decoration-skip-ink: none;
+  @include font(16, 24);
+  font-weight: 400;
+  color: $_link-color;
+}
+
+.icon-arrow-back {
+  width: 6px;
+  height: 12px;
+  margin-right: 11px;
+}
+
+.back-link:hover,
+.icon-arrow-back:hover {
+  color: $_light-blue;
+  fill: $_light-blue;
+}
