@@ -96,3 +96,8 @@ br {
   word-break: break-word;
   overflow-wrap: anywhere;
 }
+
+.cookie-link:hover {
+  color: $_light-blue;
+  text-decoration: none;
+}
