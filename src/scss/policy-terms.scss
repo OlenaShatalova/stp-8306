@@ -89,7 +89,8 @@ br {
   content: '';
 }
 
-.cookie-link {
+.cookie-link,
+.email-link {
   text-decoration: underline;
   text-decoration-thickness: from-font;
   display: inline;
@@ -97,7 +98,8 @@ br {
   overflow-wrap: anywhere;
 }
 
-.cookie-link:hover {
+.cookie-link:hover,
+.email-link:hover {
   color: $_light-blue;
   text-decoration: none;
 }
