@@ -1,0 +1,61 @@
+.policy-container {
+  padding-top: 80px;
+  padding-bottom: 16px;
+
+  @include media(desktop) {
+    padding-top: 88px;
+    padding-bottom: 32px;
+  }
+}
+
+.policy-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 24px;
+
+  @include media(desktop) {
+    font-size: 36px;
+  }
+}
+
+.policy-text {
+  @include font(16, 24);
+}
+
+.policy-grid-container {
+  margin-top: 32px;
+  display: grid;
+  gap: 32px;
+}
+
+.policy-subtitle {
+  margin-bottom: 16px;
+  // font-weight: 600;
+  font-size: 20px;
+
+  @include media(desktop) {
+    font-size: 24px;
+  }
+}
+
+.policy-inner-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.policy-list-container {
+  display: grid;
+  gap: 16px;
+}
+
+.policy-list {
+  text-decoration-skip-ink: none;
+  list-style-type: disc;
+  padding-left: 19px;
+}
+.policy-list-item {
+  padding-left: 5px;
+}
+.policy-list-item::marker {
+  font-size: 10px;
+}
