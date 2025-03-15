@@ -7,41 +7,47 @@ $header-border-color: #ffd700;
 $mobile-padding: 20px;
 $desktop-padding: 30px;
 $transition-duration: 0.3s;
-$desktop-menu-gap: 72px;
+$desktop-menu-gap: 20px;
 $desktop-menu-padding: 8px;
-$desktop-logo-margin: 61px;
+$desktop-logo-margin: 0px;
 
-// Базові стилі для хедера (мобільна версія)
-.header__container {
-  background-color: $header-bg-color;
-  padding: 8px $mobile-padding;
+// Базові стилі для хедера
+.header {
   width: 100%;
-  z-index: 1000;
-  border: 1px solid $header-border-color;
-  border-radius: $header-border-radius;
-  height: 60px;
+  height: 80px;
+  padding: 8px $mobile-padding;
+  position: fixed;
+  z-index: 5;
 
-  &--fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
+  @media (min-width: 768px) {
+    max-width: 1200px;
+    padding: 8px $desktop-padding;
+    margin: 0 auto;
   }
 
   &__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 10px; // Змінено padding контейнера
-    border: 1px solid #edebae; // Додано бордер контейнера
+    // justify-content: space-between;
+    border: 1px solid #edebae;
     border-radius: 16px;
+    background: $header-bg-color;
+    // height: 100%;
+    width: 100%;
   }
 
-  &__logo img {
-    width: 48px;
-    height: 46px;
-    border-radius: 6px;
-    max-height: 56px;
-    object-fit: contain;
+  &__logo {
+    display: flex; // Додано
+    align-items: center; // Додано
+    margin-left: 61px;
+    overflow: hidden;
+    img {
+      display: block;
+      // max-width: 100%;
+      // height: auto;
+      width: 81px;
+      height: 78px;
+    }
   }
 
   &__burger {
@@ -60,10 +66,18 @@ $desktop-logo-margin: 61px;
         opacity: 0.8;
       }
     }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 
   &__nav-wrapper {
     display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
   }
 
   &__nav {
@@ -80,30 +94,45 @@ $desktop-logo-margin: 61px;
       display: block;
       animation: slideDown $transition-duration ease-in-out;
     }
+
+    @media (min-width: 768px) {
+      display: flex;
+      position: static;
+      // width: auto;
+      background-color: transparent;
+      padding: $desktop-menu-padding;
+      border-radius: $header-border-radius;
+      margin: $desktop-menu-padding $desktop-menu-padding $desktop-menu-padding;
+      justify-content: space-evenly;
+      width: 100%;
+    }
   }
 
   &__nav-list {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    white-space: nowrap;
+    gap: $desktop-menu-gap;
   }
 
   &__nav-item {
-    margin-bottom: 10px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
   }
 
   &__nav-link {
     color: $header-text-fill;
     text-decoration: none;
-    font-size: 16px;
-    transition: color $transition-duration ease-in-out;
+    text-stroke: 1px $header-text-stroke;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: all $transition-duration ease-in-out;
 
     &:hover {
-      color: darken($header-text-fill, 20%);
+      color: darken($header-text-fill, 10%);
+      text-stroke: 1px darken($header-text-stroke, 10%);
     }
   }
 }
@@ -117,101 +146,4 @@ $desktop-logo-margin: 61px;
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-@media (min-width: 768px) {
-  .header {
-    border: 1px solid $header-border-color;
-    border-radius: $header-border-radius;
-    padding: 8px $desktop-padding;
-    height: 80px;
-
-    &__container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px; // Змінено padding контейнера
-      border: 1px solid #edebae; // Додано бордер контейнера
-    }
-
-    &__logo img {
-      width: 81px;
-      height: 78px;
-      border-radius: 8px;
-      max-height: 76px;
-      object-fit: contain;
-    }
-
-    &__logo {
-      margin-left: $desktop-logo-margin;
-    }
-
-    &__burger {
-      display: none;
-    }
-
-    &__nav-wrapper {
-      display: block;
-    }
-
-    &__nav {
-      display: block;
-      position: static;
-      width: auto;
-      background-color: transparent;
-      padding: $desktop-menu-padding;
-      border-radius: $header-border-radius;
-      margin: $desktop-menu-padding $desktop-menu-padding 0
-        $desktop-menu-padding;
-    }
-
-    &__nav-list {
-      display: flex;
-      justify-content: flex-end;
-      gap: $desktop-menu-gap;
-    }
-
-    &__nav-item {
-      margin-bottom: 0;
-    }
-
-    &__nav-link {
-      color: $header-text-fill;
-      -webkit-text-stroke: 1px $header-text-stroke;
-      text-stroke: 1px $header-text-stroke;
-      font-weight: 500;
-      font-size: 16px;
-      transition: all $transition-duration ease-in-out;
-
-      &:hover {
-        color: darken($header-text-fill, 10%);
-        -webkit-text-stroke: 1px darken($header-text-stroke, 10%);
-        text-stroke: 1px darken($header-text-stroke, 10%);
-      }
-    }
-  }
-}
-
-/////////////////
-.header {
-  width: 320px;
-  height: 54px;
-  padding-top: 6px;
-  position: fixed;
-  padding-inline: 16px;
-  z-index: 5;
-
-  @include media(desktop) {
-    width: 1200px;
-  }
-}
-
-.header__container {
-  height: 48px;
-  border: 1px solid #f5b000;
-  border-radius: 16px;
-  background: rgba(206, 206, 206, 0.2);
-}
-
-.blured {
-  backdrop-filter: blur(50px);
 }
