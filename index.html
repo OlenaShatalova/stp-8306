@@ -24,59 +24,106 @@
     <title>Match Stars</title>
     
     <script type="module" crossorigin src="/stp-8306/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/stp-8306/assets/styles-1723e8cb.css">
+    <link rel="stylesheet" href="/stp-8306/assets/styles-7d85f5be.css">
   </head>
   <body>
-        <header class="header header--fixed">
-      <div class="header__container">
-        <a class="header__logo" href="#">
-          <img
-            src="/stp-8306/assets/logo-40722753.png"
-            alt="Логотип гри"
-            srcset="/stp-8306/assets/logo-40722753.png 1x, /stp-8306/assets/logo@2x-b513c9dc.png 2x"
-          />
-        </a>
+    <header class="header header--fixed">
+  <div class="header__container blured">
+    <a class="header__logo" href="#">
+      <img
+        src="/stp-8306/assets/logo-40722753.png"
+        alt="Логотип гри"
+        srcset="/stp-8306/assets/logo-40722753.png 1x, /stp-8306/assets/logo@2x-b513c9dc.png 2x"
+      />
+    </a>
 
-        <button class="header__burger" id="burger-button">
-          <img
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAYAAABB7B6eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAnSURBVHgB7dNBDQAACAOxDf9iMMcbVJAQcvVQV6q1KAScZx4ADx4MGa0H9kYjxoQAAAAASUVORK5CYII="
-            alt="Меню"
-            srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAYAAABB7B6eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAnSURBVHgB7dNBDQAACAOxDf9iMMcbVJAQcvVQV6q1KAScZx4ADx4MGa0H9kYjxoQAAAAASUVORK5CYII= 1x, data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAkCAYAAADPRbkKAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA1SURBVHgB7dcxDQAwDMTApPzBlFznBsYr0h0Dj+5369dip5YTAABATvuBMAEAAOT4gTQBaQOjKQgCzY3+8QAAAABJRU5ErkJggg== 2x"
-          />
-        </button>
+    <button class="header__burger" id="burger-button">
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAYAAABB7B6eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAnSURBVHgB7dNBDQAACAOxDf9iMMcbVJAQcvVQV6q1KAScZx4ADx4MGa0H9kYjxoQAAAAASUVORK5CYII="
+        alt="Меню"
+        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAYAAABB7B6eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAnSURBVHgB7dNBDQAACAOxDf9iMMcbVJAQcvVQV6q1KAScZx4ADx4MGa0H9kYjxoQAAAAASUVORK5CYII= 1x, data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAkCAYAAADPRbkKAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA1SURBVHgB7dcxDQAwDMTApPzBlFznBsYr0h0Dj+5369dip5YTAABATvuBMAEAAOT4gTQBaQOjKQgCzY3+8QAAAABJRU5ErkJggg== 2x"
+      />
+    </button>
 
-        <div class="header__nav-wrapper">
-          <nav class="header__nav" id="header-nav">
-            <ul class="header__nav-list">
-              <li class="header__nav-item">
-                <a class="header__nav-link" href="#">Home</a>
-              </li>
-              <li class="header__nav-item">
-                <a class="header__nav-link" href="#">Game Description</a>
-              </li>
-              <li class="header__nav-item">
-                <a class="header__nav-link" href="#">Gallery</a>
-              </li>
-              <li class="header__nav-item">
-                <a class="header__nav-link" href="#">Key Features</a>
-              </li>
-              <li class="header__nav-item">
-                <a class="header__nav-link" href="#"
-                  >Main Characters Description</a
-                >
-              </li>
-              <li class="header__nav-item">
-                <a class="header__nav-link" href="#">Reviews</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+    <div class="header__nav-wrapper">
+      <nav class="header__nav" id="header-nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Home</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Game Description</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Gallery</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Key Features</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Main Characters Description</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Reviews</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
 
 
     <main>
-      <section class="section">HOME</section>
+      <section id="home" class="section home-section">
+  <picture class="home-picture">
+    <source
+      srcset="/stp-8306/assets/mob-picture-90c0e201.jpg 1x, /stp-8306/assets/mob-picture@2x-97fdbab8.jpg 2x"
+      media="(max-width: 1199px)"
+    />
+    <source
+      srcset="/stp-8306/assets/home-phone-2b34a30c.png 1x, /stp-8306/assets/home-phone@2x-5aae5524.png 2x"
+      media="(min-width: 1200px)"
+    />
+    <img
+      class="home-img"
+      src="/stp-8306/assets/mob-picture@2x-97fdbab8.jpg"
+      alt="game's picture"
+      draggable="false"
+    />
+  </picture>
+
+  <div class="home-page-wrapper">
+    <h1 class="home-title">
+      <span class="home-title-span blue-stroke">Match Stars - </span>
+      <span class="blue-stroke">The Ultimate Puzzle Adventure!</span>
+    </h1>
+
+    <h2 class="home-subtitle">
+      Match, Blast, and Shine with Your Star-Powered Team!
+    </h2>
+
+    <a
+      class="google-link hover-box"
+      href="https://play.google.com/store/apps/details?id=com.kingone.puzzle.maf&hl=en&gl=us"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        class="google-img"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAABDCAYAAADAiGZmAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUeSURBVHgB7dtRSFtXGMDx77s30da0MxVqdbAuFrq9Kig4GBhr+zAYTFsf5suMD3voW33cw5hhjHYPAwtrXwYzPgzdWGcLo2xDmzysICgzsLFBN0g2ZF0dzIyqrebenJ0v5krM9Obe3HNOEugf2sbk2vbnOd+9F9sglNQ9MxxGDd5gjIUZQBAB0vSDMZxeHvkyAXUeWg96ZwZDBupT/GHY5viEj/nHFkdm01Cn5cGENVGP8xUNOfykmM780XqEa/QTx845xVL82IiJ2Xj35xffgzoLe2YuRhjiFFQYzTcwFl0a+SoGdZAGrHkUPEQ7g75g3bOX4r0zb4agxsP+a2vrW+1Xg2bjHyCiWp9vDc2mYNOf74C+fRpEVOvzjec+2GD0gGlbsPX8VRC10vnfvAbnew9MyUAXqpnrt1b8AeaaQOT2LipsYDbVM3tpqtonNq30CUIHVt8H/+NXQXQ03xy+Us353relS3vS+glkj38PUv7gKs23LZiSic7/BQCS/DI2pGq+tXIHHF17W8r2tuJf7U6V810WTMlGU6rmu+yWLk729raSOd+uwJQqNCVjvl2Dqe2W27B9Yg5UJfL+3NEMl9b4zyA0rg+Bqtr0rcgXLXdT2QWf5/muCEypQrfrW3Djufv5X/mZbcJY8Kd2FvwRqLCKwZRs9D5sIf7NxRAyNkVwFj8SApd5AlOy0AdhiyO4YRopDp9yA/cMpkSjy2GL4/AIwZ3OtxAwJQrtBrsvh/MtDEx5RVeMLVQ83zvf+TsPOkYomKoU7RVbXB6usZWD5ls4mHKLFoktrjDfK8a8Pmg9JwVMOUXLwhYVZIBzFloamCqHVoDdi6P59oagDyRHaKr03vus71+40XwfjmMWFBU0DN8VqStsVbrSVcDuhtAnfYWtCE3fIHzh1M3qYHfrVLLCVi+tnoGPFv+uFpYKKgOHNn6Dd38YB99KA2x+/SJUJ0wqAVvYgLGR/3jnx5aqoBEhKX2G+/76Ft568PEe1orQVOD130FVuqZHpYIJe/nna4e+rhTNIIr9T9PStnQ5rJWK7c2ATfsvGBP0WArYKdaK0Bu3zgDb1kFoCBnGcLzhvBmxnhIOdou1yj5ohsefnRWD5lDawj7tWEfDhexk8UtCwZVircxHR72jEW77NF8XbWHsz2RKXxYG9oq18oBO8FXt9w8YQ3RyOuwgIeDXVm8JwVq5QSNimiGO+c8b/XxVE+WO9wweTk3DKL/Oiq4sujCnuhboahjIxsBhnsCEHU7FQFaHofmqxuzm1K6KwbKxVnn0py9n2FOdYPk59Q1kx+zm1K6K7rRUYa3MzJHM5t3TQydu/poEj7kGq8TyfzXM5JBdPzW/NAELICRXYJXYHMD1J2ZgoiORcDWj5XIMVoZFSJiGPtaeWEyDhByBlWARkwi58ZPzywmQWFmwbCzNqYks2ja/NAkKsr0sycYyDt0wAx1t88tKsNShKywVK3lO7ToQLA3LoQgsKntO7fofWAaW5pQxGG9dWIpBldsHvvzLh9D38BsQlXXjsGkcmxR9Pa20PbBoLC9mmHq0GnNqF4EzHBsUhq2BObXLd+WnaLJ3LREGz2H+/0fWwpzapb3yKH4HPJQ/IfHr6abZ1NV6r7axFK6HO4NZvWGF3waEwH2xTTMwXisnJCfl32z5MNwb0nWToyHo8LNqek7t2ns77S46F7dfaUwj5sbqEWqFpU+sneuJ8DvsUWTQWXjDNJ9RSGKO3Tl5T90977ME9R/CddNJ2IUQCgAAAABJRU5ErkJggg=="
+        alt="google icon"
+        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAiCAYAAABIiGl0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALaSURBVHgB3Zc7bNNAGID/u9jmUfoYWoIYIBkiMRaJSt1IgEpILJQKRLd0YGTIiJCoPVR0QIIKsdIwQMpDqDMkshcklFS0EwOqVKsDD6kSKXWrFj9+7kJd0jZxbMdd+IY4Z9/93/3+zy8CjIFX1/vRcR4iQIIAVIHgrCU5UwvDs1U4IMhg4WrCIrF59r9n1wEAHRCVyujbPBwA5NzMiMq26aYd+AQoHa7ceL0AUYrTDz7j+sn7gHTDuyNAPoai8nF0RocoxBcmDHQOLYMf+d8RKEdRf1r72ToFHV/vADV7W49AIotbsfmBwrUstEEtY7fhCCuwwTJ3xBV/g1n9EcnY3OgbDQJCdzWsXjjqN3MGv/zYqVcHZkamBws3ExCAXRm7BM38XzSUBUd65mcB0oY7A2a+A6u/TUz1y7uebKuutOmBkPK7nfOJJDWmrZK4ZL4X0k3jewUJIu8kJkx2leEKuzQ5iMjqDyqbwDSqhxOBxH7lXPqk+wOcl77tO8YmkLVsa8ksCeP1E2gpbiV3pSlh1TsIgmw7tvq7JGZ5s+Gqbsbe1e5bugcCOOwrY5f6zMNKOQh0PJDYlfct34bHUAkl3Vb3BxZ3WAbI5Qk48fI4OKsShIEQogcS921+h8nyLThtLNaka89ToeQOgOJbzKX3PuVq250AIeTsoZKTLpp5X+JG0nr5r6dnwP5xpFUYTYgJSWnIfMQbLcVeUhfcjMHai1QzucaWcUa8ZGVIZlN3d9J2pU3lBKr8tHKhOGRpe/vTKKT1cqOQqiIhOYEe2zmtjRCikm6TNw1JYYtH56/nXgiRSAlo7Dao9BXnNL9DhPakRGc3+ly8WJ6FgNAwUv6ZgwSVdfvo2XgpuJQjBJUy8obdkUtqWlvv1YJvaYg6eoZbvDykdpnVtEcXnRBnLCqhi9Bt/VSQfULt07E6OgSn4sWKDAcA5ZkQghlmWnCFfOGwOibjxTkZ/jf+AEniiySIs+p3AAAAAElFTkSuQmCC 1x, data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAABDCAYAAADAiGZmAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUeSURBVHgB7dtRSFtXGMDx77s30da0MxVqdbAuFrq9Kig4GBhr+zAYTFsf5suMD3voW33cw5hhjHYPAwtrXwYzPgzdWGcLo2xDmzysICgzsLFBN0g2ZF0dzIyqrebenJ0v5krM9Obe3HNOEugf2sbk2vbnOd+9F9sglNQ9MxxGDd5gjIUZQBAB0vSDMZxeHvkyAXUeWg96ZwZDBupT/GHY5viEj/nHFkdm01Cn5cGENVGP8xUNOfykmM780XqEa/QTx845xVL82IiJ2Xj35xffgzoLe2YuRhjiFFQYzTcwFl0a+SoGdZAGrHkUPEQ7g75g3bOX4r0zb4agxsP+a2vrW+1Xg2bjHyCiWp9vDc2mYNOf74C+fRpEVOvzjec+2GD0gGlbsPX8VRC10vnfvAbnew9MyUAXqpnrt1b8AeaaQOT2LipsYDbVM3tpqtonNq30CUIHVt8H/+NXQXQ03xy+Us353relS3vS+glkj38PUv7gKs23LZiSic7/BQCS/DI2pGq+tXIHHF17W8r2tuJf7U6V810WTMlGU6rmu+yWLk729raSOd+uwJQqNCVjvl2Dqe2W27B9Yg5UJfL+3NEMl9b4zyA0rg+Bqtr0rcgXLXdT2QWf5/muCEypQrfrW3Djufv5X/mZbcJY8Kd2FvwRqLCKwZRs9D5sIf7NxRAyNkVwFj8SApd5AlOy0AdhiyO4YRopDp9yA/cMpkSjy2GL4/AIwZ3OtxAwJQrtBrsvh/MtDEx5RVeMLVQ83zvf+TsPOkYomKoU7RVbXB6usZWD5ls4mHKLFoktrjDfK8a8Pmg9JwVMOUXLwhYVZIBzFloamCqHVoDdi6P59oagDyRHaKr03vus71+40XwfjmMWFBU0DN8VqStsVbrSVcDuhtAnfYWtCE3fIHzh1M3qYHfrVLLCVi+tnoGPFv+uFpYKKgOHNn6Dd38YB99KA2x+/SJUJ0wqAVvYgLGR/3jnx5aqoBEhKX2G+/76Ft568PEe1orQVOD130FVuqZHpYIJe/nna4e+rhTNIIr9T9PStnQ5rJWK7c2ATfsvGBP0WArYKdaK0Bu3zgDb1kFoCBnGcLzhvBmxnhIOdou1yj5ohsefnRWD5lDawj7tWEfDhexk8UtCwZVircxHR72jEW77NF8XbWHsz2RKXxYG9oq18oBO8FXt9w8YQ3RyOuwgIeDXVm8JwVq5QSNimiGO+c8b/XxVE+WO9wweTk3DKL/Oiq4sujCnuhboahjIxsBhnsCEHU7FQFaHofmqxuzm1K6KwbKxVnn0py9n2FOdYPk59Q1kx+zm1K6K7rRUYa3MzJHM5t3TQydu/poEj7kGq8TyfzXM5JBdPzW/NAELICRXYJXYHMD1J2ZgoiORcDWj5XIMVoZFSJiGPtaeWEyDhByBlWARkwi58ZPzywmQWFmwbCzNqYks2ja/NAkKsr0sycYyDt0wAx1t88tKsNShKywVK3lO7ToQLA3LoQgsKntO7fofWAaW5pQxGG9dWIpBldsHvvzLh9D38BsQlXXjsGkcmxR9Pa20PbBoLC9mmHq0GnNqF4EzHBsUhq2BObXLd+WnaLJ3LREGz2H+/0fWwpzapb3yKH4HPJQ/IfHr6abZ1NV6r7axFK6HO4NZvWGF3waEwH2xTTMwXisnJCfl32z5MNwb0nWToyHo8LNqek7t2ns77S46F7dfaUwj5sbqEWqFpU+sneuJ8DvsUWTQWXjDNJ9RSGKO3Tl5T90977ME9R/CddNJ2IUQCgAAAABJRU5ErkJggg== 2x"
+      />
+      <div class="google-cont">
+        <span class="span-download">Download Now </span>
+        <span class="span-google">Google Play</span>
+      </div>
+      <svg class="icon-loader" width="24" height="25">
+        <use href="/stp-8306/assets/sprite-c15077f4.svg#icon-arrow-load"></use>
+      </svg>
+    </a>
+  </div>
+</section>
 
       <section class="section">
   <h2 class="title">Benefits</h2>
