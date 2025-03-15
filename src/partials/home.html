@@ -1,1 +1,50 @@
-<section class="section">HOME</section>
+<section id="home" class="section home-section">
+  <picture class="home-picture">
+    <source
+      srcset="./img/mob-picture.jpg 1x, ./img/mob-picture@2x.jpg 2x"
+      media="(max-width: 1199px)"
+    />
+    <source
+      srcset="./img/home-phone.png 1x, ./img/home-phone@2x.png 2x"
+      media="(min-width: 1200px)"
+    />
+    <img
+      class="home-img"
+      src="./img/mob-picture@2x.jpg"
+      alt="game's picture"
+      draggable="false"
+    />
+  </picture>
+
+  <div class="home-page-wrapper">
+    <h1 class="home-title">
+      <span class="home-title-span blue-stroke">Match Stars - </span>
+      <span class="blue-stroke">The Ultimate Puzzle Adventure!</span>
+    </h1>
+
+    <h2 class="home-subtitle">
+      Match, Blast, and Shine with Your Star-Powered Team!
+    </h2>
+
+    <a
+      class="google-link hover-box"
+      href="https://play.google.com/store/apps/details?id=com.kingone.puzzle.maf&hl=en&gl=us"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        class="google-img"
+        src="./img/google-play-icon@2x.png"
+        alt="google icon"
+        srcset="./img/google-play-icon.png 1x, ./img/google-play-icon@2x.png 2x"
+      />
+      <div class="google-cont">
+        <span class="span-download">Download Now </span>
+        <span class="span-google">Google Play</span>
+      </div>
+      <svg class="icon-loader" width="24" height="25">
+        <use href="/img/sprite.svg#icon-arrow-load"></use>
+      </svg>
+    </a>
+  </div>
+</section>

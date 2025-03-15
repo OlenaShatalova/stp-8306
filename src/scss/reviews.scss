@@ -1,14 +1,14 @@
-.reviews-section {
-  position: relative;
-}
+// .reviews-section {
+//   position: relative;
+// }
 
-.reviews-section::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: calc(50% - 50vw);
-  width: 100vw;
-  height: 5px;
-  background-color: $_dark_blue;
-  z-index: -1;
-}
+// .reviews-section::before {
+//   content: '';
+//   position: absolute;
+//   bottom: 0;
+//   left: calc(50% - 50vw);
+//   width: 100vw;
+//   height: 5px;
+//   background-color: $_dark_blue;
+//   z-index: -1;
+// }

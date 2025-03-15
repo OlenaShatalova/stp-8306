@@ -1,8 +1,19 @@
 .footer-section {
+  position: relative;
   // font-family: 'Inter', sans-serif;
   padding-inline: 34px;
   text-align: center;
   font-size: 12px;
+}
+.footer-section:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(50% - 50vw);
+  width: 100vw;
+  height: 5px;
+  background-color: $_dark_blue;
+  z-index: -1;
 }
 
 .footer-list {

@@ -190,3 +190,27 @@ $desktop-logo-margin: 61px;
     }
   }
 }
+
+/////////////////
+.header {
+  width: 320px;
+  height: 54px;
+  padding-top: 6px;
+  position: fixed;
+  padding-inline: 16px;
+
+  @include media(desktop) {
+    width: 1200px;
+  }
+}
+
+.header__container {
+  height: 48px;
+  border: 1px solid #f5b000;
+  border-radius: 16px;
+  background: rgba(206, 206, 206, 0.2);
+}
+
+.blured {
+  backdrop-filter: blur(50px);
+}

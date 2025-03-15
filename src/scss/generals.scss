@@ -19,9 +19,11 @@ body {
 main {
   width: 100%;
   padding-inline: 16px;
+  padding-top: 54px;
 
   @include media(desktop) {
     padding-inline: 60px;
+    padding-top: 88px;
   }
 }
 
@@ -55,4 +57,9 @@ main {
     font-size: 36px;
     font-weight: 400;
   }
+}
+
+.blue-stroke {
+  text-shadow: (-1px -1px 0 $_dark_blue), (1px -1px 0 $_dark_blue),
+    (-1px 1px 0 $_dark_blue), (1px 1px 0 $_dark_blue);
 }
