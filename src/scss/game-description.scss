@@ -1,0 +1,44 @@
+.description-section {
+  @include media(to-desktop) {
+    text-align: center;
+  }
+}
+
+.description-grid {
+  display: grid;
+  gap: 24px;
+
+  @include media(desktop) {
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 799px 202px;
+  }
+}
+
+.description-img {
+  margin-inline: auto;
+
+  @include media(desktop) {
+    order: 2;
+  }
+}
+
+.description-list {
+  order: 1;
+  display: grid;
+  gap: 24px;
+  text-align: start;
+
+  @include media(desktop) {
+    gap: 32px;
+    padding-left: 5px;
+  }
+}
+
+.description-text {
+  font-size: 20px;
+
+  @include media(desktop) {
+    font-size: 24px;
+  }
+}
