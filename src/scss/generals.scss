@@ -32,8 +32,8 @@ main {
   padding-bottom: 32px;
 
   @include media(desktop) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 }
 
@@ -46,14 +46,9 @@ main {
   border: 2px solid #f5b000;
   font-size: 20px;
   font-weight: 400;
-  text-align: start;
-  margin-bottom: 24px;
   color: $_light_yellow;
-  text-shadow: -2px -2px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-    1px 1px 0 black;
 
   @include media(desktop) {
-    margin-bottom: 32px;
     font-size: 36px;
     font-weight: 400;
   }
@@ -63,3 +58,14 @@ main {
   text-shadow: (-1px -1px 0 $_dark_blue), (1px -1px 0 $_dark_blue),
     (-1px 1px 0 $_dark_blue), (1px 1px 0 $_dark_blue);
 }
+
+.black-stroke {
+  text-shadow: (-0.5px -0.5px 0 $_black), (0.5px -0.5px 0 $_black),
+    (-0.5px 0.5px 0 $_black), (0.5px 0.5px 0 $_black);
+  // text-shadow: (-0.035em -0.035em 0 $_black), (0.035em -0.035em 0 $_black),
+  //   (-0.035em 0.035em 0 $_black), (0.035em 0.035em 0 $_black);
+}
+// .black-stroke {
+//   text-shadow: (-0.8px -0.8px 0.3px $_black), (0.8px -0.8px 0.3px $_black),
+//     (-0.8px 0.8px 0.3px $_black), (0.8px 0.8px 0.3px $_black);
+// }

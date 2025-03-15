@@ -1,0 +1,96 @@
+.benefits-section {
+  text-align: center;
+
+  @include media(desktop) {
+    padding-inline: 30px;
+    text-align: start;
+  }
+}
+
+.benefits-grid {
+  display: grid;
+  gap: 24px;
+
+  @include media(desktop) {
+    padding: 24px;
+    grid-template-columns: 386px 386px;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+
+.benefits-grid::before {
+  @include media(desktop) {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 4px;
+    height: calc(100% - 48px);
+    background-color: $_dark-yellow;
+  }
+}
+
+.benefits-grid-item:nth-child(even) {
+  @include media(desktop) {
+    transform: translateY(50%);
+  }
+}
+
+.benefits-grid-item {
+  width: 287px;
+  height: 153px;
+  position: relative;
+  display: grid;
+  justify-items: center;
+
+  @include media(desktop) {
+    width: 386px;
+    height: 206px;
+  }
+}
+
+.benefits-grid-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/img/benefits/union.png') no-repeat center bottom / 286px
+    129px;
+  z-index: -1;
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url('/img/benefits/union@2x.png');
+  }
+
+  @include media(desktop) {
+    background-size: 382px 175px;
+  }
+}
+
+.benefits-grid-item:nth-child(odd)::before {
+  transform: scaleX(-1);
+}
+
+.benefits-subtitle {
+  width: 222px;
+  height: 40px;
+  border: 5px solid $_dark-yellow;
+  border-radius: 16px;
+  background: $_main_color;
+  padding: 6px;
+  font-weight: 400;
+  color: $_black;
+  display: grid;
+  align-items: center;
+  @include media(desktop) {
+    height: 48px;
+  }
+}
+
+.benefits-text {
+  padding-inline: 28px 37px;
+  padding-bottom: 5px;
+  text-align: left;
+  font-size: 20px;
+}

@@ -198,6 +198,7 @@ $desktop-logo-margin: 61px;
   padding-top: 6px;
   position: fixed;
   padding-inline: 16px;
+  z-index: 5;
 
   @include media(desktop) {
     width: 1200px;
