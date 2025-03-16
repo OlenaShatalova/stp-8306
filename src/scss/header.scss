@@ -81,7 +81,9 @@ $desktop-logo-margin: 0px;
   }
 
   &__nav {
-    display: none;
+    // display: none; 16/03 7-58
+    display: flex;
+    justify-content: space-evenly;
     position: absolute;
     top: 100%;
     left: 0;
@@ -146,4 +148,9 @@ $desktop-logo-margin: 0px;
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.blue-stroke {
+  text-shadow: (-1px -1px 0 $_dark_blue), (1px -1px 0 $_dark_blue),
+    (-1px 1px 0 $_dark_blue), (1px 1px 0 $_dark_blue);
 }
