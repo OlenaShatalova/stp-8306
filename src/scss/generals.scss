@@ -71,3 +71,7 @@ main {
   text-shadow: (-1px -1px 0 $_black), (1px -1px 0 $_black), (-1px 1px 0 $_black),
     (1px 1px 0 $_black);
 }
+
+.no-scroll {
+  overflow: hidden;
+}
