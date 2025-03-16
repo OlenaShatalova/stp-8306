@@ -26,51 +26,53 @@
     <script type="module" crossorigin src="/stp-8306/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/stp-8306/assets/vendor-95ee0434.js">
     <link rel="stylesheet" href="/stp-8306/assets/vendor-24abd9de.css">
-    <link rel="stylesheet" href="/stp-8306/assets/styles-9c28a015.css">
+    <link rel="stylesheet" href="/stp-8306/assets/styles-749f900e.css">
   </head>
   <body>
-    <header class="header header--fixed">
+    <header class="header">
   <div class="header__container blured">
     <a class="header__logo" href="#">
       <img
         src="/stp-8306/assets/logo-40722753.png"
-        alt="Логотип гри"
+        alt="Game's Logo"
         srcset="/stp-8306/assets/logo-40722753.png 1x, /stp-8306/assets/logo@2x-b513c9dc.png 2x"
       />
     </a>
 
-    <button class="header__burger" id="burger-button">
-      <img
-        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAYAAABB7B6eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAnSURBVHgB7dNBDQAACAOxDf9iMMcbVJAQcvVQV6q1KAScZx4ADx4MGa0H9kYjxoQAAAAASUVORK5CYII="
-        alt="Меню"
-        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAYAAABB7B6eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAnSURBVHgB7dNBDQAACAOxDf9iMMcbVJAQcvVQV6q1KAScZx4ADx4MGa0H9kYjxoQAAAAASUVORK5CYII= 1x, data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAkCAYAAADPRbkKAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA1SURBVHgB7dcxDQAwDMTApPzBlFznBsYr0h0Dj+5369dip5YTAABATvuBMAEAAOT4gTQBaQOjKQgCzY3+8QAAAABJRU5ErkJggg== 2x"
-      />
+    <button class="header__burger" id="burger-button" type="button">
+      <svg class="icon-burger" width="32" height="22" fill="currentColor">
+        <use href="../img/sprite.svg#icon-burger-btn"></use>
+      </svg>
     </button>
 
-    <div class="header__nav-wrapper">
-      <nav class="header__nav" id="header-nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Home</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Game Description</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Gallery</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Key Features</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Main Characters Description</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Reviews</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <!-- <div class="header__nav-wrapper"> -->
+    <nav class="header__nav" id="header-nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a class="header__nav-link blue-stroke" href="#home">Home</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link blue-stroke" href="#description"
+            >Game Description</a
+          >
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link blue-stroke" href="#gallery">Gallery</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link blue-stroke" href="#">Key Features</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link blue-stroke" href="#characters"
+            >Main Characters Description</a
+          >
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link blue-stroke" href="#reviews">Reviews</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- </div> -->
   </div>
 </header>
 
@@ -121,7 +123,7 @@
         <span class="span-google">Google Play</span>
       </div>
       <svg class="icon-loader" width="24" height="25" fill="currentColor">
-        <use href="/stp-8306/assets/sprite-843910ae.svg#icon-arrow-load"></use>
+        <use href="/stp-8306/assets/sprite-75540f03.svg#icon-arrow-load"></use>
       </svg>
     </a>
   </div>
@@ -359,7 +361,7 @@
   </div>
 </section>
 
-      <section class="section">MAIN CHARACTERS</section>
+      <section id="characters" class="section">MAIN CHARACTERS</section>
 
       <section id="reviews" class="section reviews-section">
   <h2 class="title black-stroke">Reviews</h2>
