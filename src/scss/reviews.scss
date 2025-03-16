@@ -1,14 +1,35 @@
-// .reviews-section {
-//   position: relative;
-// }
+.reviews-section {
+  @include media(to-desktop) {
+    text-align: center;
+  }
+}
 
-// .reviews-section::before {
-//   content: '';
-//   position: absolute;
-//   bottom: 0;
-//   left: calc(50% - 50vw);
-//   width: 100vw;
-//   height: 5px;
-//   background-color: $_dark_blue;
-//   z-index: -1;
-// }
+.reviews-swiper {
+  height: 196px;
+
+  @include media(desktop) {
+    height: 175px;
+  }
+}
+
+.reviews-swiper .swiper-slide {
+  width: 210px !important;
+  // height: 125px !important;
+  height: 128px !important;
+  border-radius: 16px;
+  padding: 16px;
+  padding-bottom: 13px;
+  background-color: $_main_color;
+  display: grid;
+  align-content: space-between;
+  text-align: left;
+  @include font(16, 24);
+}
+
+.review-text {
+  color: $_black;
+}
+
+.review-author {
+  color: $_dark_blue;
+}

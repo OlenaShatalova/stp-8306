@@ -1,6 +1,4 @@
 .gallery-section {
-  overflow: visible;
-
   @include media(to-desktop) {
     text-align: center;
   }
@@ -12,10 +10,6 @@
   @include media(desktop) {
     height: 359px;
   }
-}
-
-.gallery-swiper .swiper-wrapper {
-  overflow: visible;
 }
 
 .gallery-swiper .swiper-slide {
@@ -30,7 +24,7 @@
   border-radius: 24px;
 }
 
-.gallery-scrollbar.swiper-scrollbar {
+.swiper-scrollbar {
   background-color: $_light_yellow !important;
 
   @include media(desktop) {
