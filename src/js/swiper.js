@@ -21,13 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
       },
     },
-    breakpoints: {
-      1200: {
-        // slidesPerView: 4,
-        // spaceBetween: 48,      1200: {        // slidesPerView: 4,
-        // spaceBetween: 48,
-      },
-    },
+
     loop: false,
   });
 
