@@ -1,50 +1,43 @@
-// Змінні
-$header-bg-color: #79375f;
-$header-text-fill: #ffffff;
-$header-text-stroke: #4462c1;
-$header-border-radius: 16px;
-$header-border-color: #ffd700;
-$mobile-padding: 20px;
-$desktop-padding: 30px;
-$transition-duration: 0.3s;
-$desktop-menu-gap: 20px;
-$desktop-menu-padding: 8px;
-$desktop-logo-margin: 0px;
+.blured {
+  backdrop-filter: blur(50px);
+}
 
-// Базові стилі для хедера
 .header {
-  width: 100%;
-  height: 80px;
-  padding: 8px $mobile-padding;
+  width: 320px;
+  height: 54px;
+  padding-top: 6px;
+  padding-inline: 16px;
   position: fixed;
   z-index: 5;
 
-  @media (min-width: 768px) {
-    max-width: 1200px;
-    padding: 8px $desktop-padding;
-    margin: 0 auto;
+  @include media(desktop) {
+    width: 1200px;
+    height: 88px;
+    padding: 8px;
   }
 
   &__container {
+    height: 46px;
+    padding-inline: 8px;
     display: flex;
     align-items: center;
-    // justify-content: space-between;
-    border: 1px solid #edebae;
+    justify-content: space-between;
+    border: 1px solid $_dark-yellow;
     border-radius: 16px;
-    background: $header-bg-color;
-    // height: 100%;
-    width: 100%;
+    background: rgba(206, 206, 206, 0.2);
+    overflow: hidden;
+
+    @include media(desktop) {
+      height: 80px;
+      padding-inline: 61px;
+    }
   }
 
-  &__logo {
-    display: flex; // Додано
-    align-items: center; // Додано
-    margin-left: 61px;
-    overflow: hidden;
-    img {
-      display: block;
-      // max-width: 100%;
-      // height: auto;
+  &__logo img {
+    width: 48px;
+    height: 46px;
+
+    @include media(desktop) {
       width: 81px;
       height: 78px;
     }
@@ -54,96 +47,39 @@ $desktop-logo-margin: 0px;
     background: none;
     border: none;
     padding: 0;
-    cursor: pointer;
+    padding: 5px;
 
-    img {
-      width: 40px;
-      height: 40px;
-      border-radius: $header-border-radius;
-      transition: opacity $transition-duration ease-in-out;
-
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-
-    @media (min-width: 768px) {
+    @include media(desktop) {
       display: none;
     }
   }
 
-  &__nav-wrapper {
-    display: none;
-
-    @media (min-width: 768px) {
-      display: block;
-    }
-  }
-
   &__nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: $header-bg-color;
-    padding: $mobile-padding;
-    z-index: 999;
-
-    &--open {
-      display: block;
-      animation: slideDown $transition-duration ease-in-out;
-    }
-
-    @media (min-width: 768px) {
-      display: flex;
-      position: static;
-      // width: auto;
-      background-color: transparent;
-      padding: $desktop-menu-padding;
-      border-radius: $header-border-radius;
-      margin: $desktop-menu-padding $desktop-menu-padding $desktop-menu-padding;
-      justify-content: space-evenly;
-      width: 100%;
+    @include media(to-desktop) {
+      display: none;
     }
   }
 
   &__nav-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    white-space: nowrap;
-    gap: $desktop-menu-gap;
-  }
-
-  &__nav-item {
-    margin-bottom: 0;
+    gap: 72px;
+    padding: 0 13px;
   }
 
   &__nav-link {
-    color: $header-text-fill;
-    text-decoration: none;
-    text-stroke: 1px $header-text-stroke;
+    padding: 14px 0;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.5;
-    transition: all $transition-duration ease-in-out;
+    @include font(16, 24);
+    transition: all $_transition-duration ease-in-out;
 
     &:hover {
-      color: darken($header-text-fill, 10%);
-      text-stroke: 1px darken($header-text-stroke, 10%);
+      color: $_light-blue;
+      text-shadow: none;
     }
-  }
-}
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+    &:active {
+      color: $_dark-blue;
+      text-shadow: none;
+    }
   }
 }
