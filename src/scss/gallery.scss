@@ -1,0 +1,31 @@
+.gallery-section {
+  text-align: center;
+  overflow: visible;
+}
+
+.gallery-swiper {
+  height: 391px;
+}
+
+.gallery-swiper .swiper-wrapper {
+  overflow: visible;
+}
+
+.gallery-swiper .swiper-slide {
+  width: 202px !important;
+  height: 359px;
+}
+
+.gallery-image {
+  width: 186px;
+  height: 343px;
+  border: 8px solid $_dark_yellow;
+  border-radius: 24px;
+}
+
+.gallery-scrollbar.swiper-scrollbar {
+  background-color: $_light_yellow !important;
+}
+.swiper-scrollbar-drag {
+  background-color: $_dark_yellow !important;
+}

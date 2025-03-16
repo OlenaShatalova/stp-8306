@@ -11,22 +11,24 @@ document.addEventListener('DOMContentLoaded', () => {
       el: '.gallery-swiper .swiper-scrollbar',
       draggable: true,
     },
-    // navigation: {
-    //   nextEl: '.swiper-button-next', // Кнопка "вперед"
-    //   prevEl: '.swiper-button-prev', // Кнопка "назад"
-    // },
-    slidesPerView: 1,
-    spaceBetween: 20,
+    slidesPerView: 'auto',
+    spaceBetween: 48,
+    centeredSlides: false,
+    on: {
+      reachEnd: function () {
+        setTimeout(() => {
+          this.slideTo(0);
+        }, 3000);
+      },
+    },
     breakpoints: {
       1200: {
-        slidesPerView: 4,
-        spaceBetween: 48,
+        // slidesPerView: 4,
+        // spaceBetween: 48,      1200: {        // slidesPerView: 4,
+        // spaceBetween: 48,
       },
     },
     loop: false,
-    autoplay: {
-      delay: 5000,
-    },
   });
 
   // Swiper for Reviews Section

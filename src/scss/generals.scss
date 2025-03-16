@@ -40,7 +40,7 @@ main {
 .title {
   display: inline-block;
   margin-bottom: 24px;
-  padding: 8px 16px;
+  padding: 2.5px 14px;
   background-color: $_dark_blue;
   border-radius: 8px;
   border: 2px solid #f5b000;
@@ -51,6 +51,8 @@ main {
   @include media(desktop) {
     font-size: 36px;
     font-weight: 400;
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
 }
 
@@ -65,7 +67,7 @@ main {
   // text-shadow: (-0.035em -0.035em 0 $_black), (0.035em -0.035em 0 $_black),
   //   (-0.035em 0.035em 0 $_black), (0.035em 0.035em 0 $_black);
 }
-// .black-stroke {
-//   text-shadow: (-0.8px -0.8px 0.3px $_black), (0.8px -0.8px 0.3px $_black),
-//     (-0.8px 0.8px 0.3px $_black), (0.8px 0.8px 0.3px $_black);
-// }
+.black-stroke {
+  text-shadow: (-1px -1px 0 $_black), (1px -1px 0 $_black), (-1px 1px 0 $_black),
+    (1px 1px 0 $_black);
+}
