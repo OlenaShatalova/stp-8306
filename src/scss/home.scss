@@ -6,6 +6,36 @@
     display: grid;
     align-items: flex-start;
     grid-template-columns: 702px 1fr;
+    position: relative;
+  }
+}
+
+@keyframes moveHeaderStars {
+  0% {
+    background-position: bottom 34px left 394px, bottom 1px right 394px,
+      bottom 28px right 24px;
+  }
+  50% {
+    background-position: bottom 48px left 374px, bottom 22px right 424px,
+      bottom 44px right 12px;
+  }
+  100% {
+    background-position: bottom 34px left 394px, bottom 1px right 394px,
+      bottom 28px right 24px;
+  }
+}
+
+.home-background {
+  @include media(desktop) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background: url('/img/star.png') no-repeat bottom 34px left 394px/ 96px 96px,
+      url('/img/star.png') no-repeat bottom 1px right 394px/ 53px 53px,
+      url('/img/star.png') no-repeat bottom 28px right 24px/ 56px 56px;
+    animation: moveHeaderStars 5s infinite alternate linear;
   }
 }
 
