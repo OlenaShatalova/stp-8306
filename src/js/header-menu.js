@@ -1,4 +1,5 @@
-import spritePath from './public/sprite.svg';
+import spritePath from '../public/sprite.svg';
+console.log(spritePath);
 
 const headerCont = document.querySelector('#header__container-js');
 const headerLogo = document.querySelector('#header__logo-js');
