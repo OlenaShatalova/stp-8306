@@ -1,6 +1,3 @@
-import spritePath from '../public/sprite.svg';
-console.log(spritePath);
-
 const headerCont = document.querySelector('#header__container-js');
 const headerLogo = document.querySelector('#header__logo-js');
 const burgerBtn = document.querySelector('#burger-btn-js');
@@ -21,7 +18,7 @@ const closeMenu = () => {
   toggleBodyScroll(false);
 
   const iconMenu = document.querySelector('.icon-burger use');
-  iconMenu.setAttribute('href', `${spritePath}#icon-burger-btn`);
+  iconMenu.setAttribute('href', '/sprite.svg#icon-burger-btn');
   // iconMenu.;
 };
 
