@@ -1,6 +1,6 @@
 <header class="header">
-  <div class="header__container blured">
-    <a class="header__logo" href="./">
+  <div class="header__container blured" id="header__container-js">
+    <a class="header__logo" id="header__logo-js" href="./">
       <img
         src="img/logo.png"
         alt="Game's Logo"
@@ -8,13 +8,47 @@
       />
     </a>
 
-    <button class="header__burger" id="burger-button" type="button">
-      <svg class="icon-burger" width="32" height="22" fill="currentColor">
+    <button class="header__burger" id="burger-btn-js" type="button">
+      <svg class="icon-burger" width="30" height="20" fill="currentColor">
         <use href="./img/sprite.svg#icon-burger-btn"></use>
       </svg>
     </button>
 
-    <!-- <div class="header__nav-wrapper"> -->
+    <nav class="mob-menu__nav" id="mob-menu__nav-js">
+      <ul class="mob-menu__list">
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#benefits"
+            >Benefits</a
+          >
+        </li>
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#description"
+            >Game Description</a
+          >
+        </li>
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#gallery"
+            >Gallery</a
+          >
+        </li>
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#"
+            >Key Features</a
+          >
+        </li>
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#characters"
+            >Main Characters Description</a
+          >
+        </li>
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#reviews"
+            >Reviews</a
+          >
+        </li>
+      </ul>
+    </nav>
+
     <nav class="header__nav" id="header-nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
@@ -41,6 +75,5 @@
         </li>
       </ul>
     </nav>
-    <!-- </div> -->
   </div>
 </header>

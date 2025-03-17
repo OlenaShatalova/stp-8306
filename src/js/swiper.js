@@ -3,7 +3,6 @@ import 'swiper/css';
 import 'swiper/css/scrollbar';
 import { Scrollbar, Autoplay } from 'swiper/modules';
 
-// Swiper for Gallery Section
 document.addEventListener('DOMContentLoaded', () => {
   const gallerySwiper = new Swiper('.gallery-swiper', {
     modules: [Scrollbar, Autoplay],
@@ -29,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  // Swiper for Reviews Section
   const reviewsSwiper = new Swiper('.reviews-swiper', {
     modules: [Scrollbar, Autoplay],
     scrollbar: {
