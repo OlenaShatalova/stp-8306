@@ -1,44 +1,79 @@
-<header class="header header--fixed">
-  <div class="header__container blured">
-    <a class="header__logo" href="#">
+<header class="header">
+  <div class="header__container blured" id="header__container-js">
+    <a class="header__logo" id="header__logo-js" href="./">
       <img
         src="img/logo.png"
-        alt="Логотип гри"
+        alt="Game's Logo"
         srcset="img/logo.png 1x, img/logo@2x.png 2x"
       />
     </a>
 
-    <button class="header__burger" id="burger-button">
-      <img
-        src="img/burger-icon.png"
-        alt="Меню"
-        srcset="img/burger-icon.png 1x, img/burger-icon@2x.png 2x"
-      />
+    <button class="header__burger" id="burger-btn-js" type="button">
+      <svg class="icon-burger" fill="currentColor">
+        <use href="/sprite.svg#icon-burger-btn"></use>
+      </svg>
     </button>
 
-    <div class="header__nav-wrapper">
-      <nav class="header__nav" id="header-nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Home</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Game Description</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Gallery</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Key Features</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Main Characters Description</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#">Reviews</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="mob-menu__nav" id="mob-menu__nav-js">
+      <ul class="mob-menu__list">
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#benefits"
+            >Benefits</a
+          >
+        </li>
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#description"
+            >Game Description</a
+          >
+        </li>
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#gallery"
+            >Gallery</a
+          >
+        </li>
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#"
+            >Key Features</a
+          >
+        </li>
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#characters"
+            >Main Characters Description</a
+          >
+        </li>
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#reviews"
+            >Reviews</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="header__nav" id="header-nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a class="header__nav-link blue-stroke" href="#home">Home</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link blue-stroke" href="#description"
+            >Game Description</a
+          >
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link blue-stroke" href="#gallery">Gallery</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link blue-stroke" href="#">Key Features</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link blue-stroke" href="#characters"
+            >Main Characters Description</a
+          >
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link blue-stroke" href="#reviews">Reviews</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
