@@ -18,7 +18,7 @@ const closeMenu = () => {
   toggleBodyScroll(false);
 
   const iconMenu = document.querySelector('.icon-burger use');
-  iconMenu.setAttribute('href', './img/sprite.svg#icon-burger-btn');
+  iconMenu.setAttribute('href', '/img/sprite.svg#icon-burger-btn');
 };
 
 burgerBtn.addEventListener('click', () => {
@@ -28,9 +28,9 @@ burgerBtn.addEventListener('click', () => {
 
   const iconMenu = document.querySelector('.icon-burger use');
   if (iconMenu.getAttribute('href').includes('icon-burger-btn')) {
-    iconMenu.setAttribute('href', './img/sprite.svg#icon-close-btn');
+    iconMenu.setAttribute('href', '/img/sprite.svg#icon-close-btn');
   } else {
-    iconMenu.setAttribute('href', './img/sprite.svg#icon-burger-btn');
+    iconMenu.setAttribute('href', '/img/sprite.svg#icon-burger-btn');
   }
 });
 
