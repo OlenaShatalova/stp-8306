@@ -1,3 +1,6 @@
+import icons from '/sprite.svg';
+console.log(icons);
+
 const headerCont = document.querySelector('#header__container-js');
 const headerLogo = document.querySelector('#header__logo-js');
 const burgerBtn = document.querySelector('#burger-btn-js');
@@ -13,7 +16,7 @@ const closeMenu = () => {
   toggleBodyScroll(false);
 
   const iconMenu = document.querySelector('.icon-burger use');
-  iconMenu.setAttribute('href', '/sprite.svg#icon-burger-btn');
+  iconMenu.setAttribute('href', `${icons}#icon-burger-btn`);
 
   document.removeEventListener('click', handleOutsideClick);
 };
@@ -39,7 +42,7 @@ burgerBtn.addEventListener('click', () => {
   const iconMenu = document.querySelector('.icon-burger use');
   iconMenu.setAttribute(
     'href',
-    isOpened ? '/sprite.svg#icon-close-btn' : '/sprite.svg#icon-burger-btn'
+    isOpened ? `${icons}#icon-close-btn` : `${icons}#icon-burger-btn`
   );
 
   if (isOpened) {
