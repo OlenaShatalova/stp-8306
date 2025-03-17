@@ -4,13 +4,8 @@ const burgerBtn = document.querySelector('#burger-btn-js');
 const mobNavLinks = document.querySelectorAll('#mob-menu__nav-js a');
 
 const toggleBodyScroll = shouldBlock => {
-  if (shouldBlock) {
-    document.body.classList.add('no-scroll');
-    document.body.classList.add('blur-bg');
-  } else {
-    document.body.classList.remove('no-scroll');
-    document.body.classList.remove('blur-bg');
-  }
+  document.body.classList.toggle('no-scroll', shouldBlock);
+  document.body.classList.toggle('blur-bg', shouldBlock);
 };
 
 const closeMenu = () => {
@@ -19,7 +14,21 @@ const closeMenu = () => {
 
   const iconMenu = document.querySelector('.icon-burger use');
   iconMenu.setAttribute('href', '/sprite.svg#icon-burger-btn');
-  // iconMenu.;
+
+  document.removeEventListener('click', handleOutsideClick);
+};
+
+const handleOutsideClick = event => {
+  const isClickInsideMenu = headerCont.contains(event.target);
+  const isClickOnLogoOrBurger =
+    headerLogo.contains(event.target) || burgerBtn.contains(event.target);
+  const isClickOnMobNavLinks = [...mobNavLinks].some(
+    link => link === event.target
+  );
+
+  if (isClickOnMobNavLinks || (!isClickOnLogoOrBurger && !isClickInsideMenu)) {
+    closeMenu();
+  }
 };
 
 burgerBtn.addEventListener('click', () => {
@@ -28,29 +37,14 @@ burgerBtn.addEventListener('click', () => {
   toggleBodyScroll(isOpened);
 
   const iconMenu = document.querySelector('.icon-burger use');
-  if (iconMenu.getAttribute('href').includes('icon-burger-btn')) {
-    iconMenu.setAttribute('href', '/sprite.svg#icon-close-btn');
-  } else {
-    iconMenu.setAttribute('href', '/sprite.svg#icon-burger-btn');
-  }
-});
-
-document.addEventListener('click', event => {
-  const isClickInsideMenu = headerCont.contains(event.target);
-
-  const isClickOnLogoOrBurger =
-    headerLogo.contains(event.target) || burgerBtn.contains(event.target);
-
-  const isClickOnMobNavLinks = [...mobNavLinks].some(
-    link => link === event.target
+  iconMenu.setAttribute(
+    'href',
+    isOpened ? '/sprite.svg#icon-close-btn' : '/sprite.svg#icon-burger-btn'
   );
 
-  if (isClickOnMobNavLinks) {
-    closeMenu();
-    return;
-  }
-
-  if (!isClickOnLogoOrBurger && !isClickInsideMenu) {
-    closeMenu();
+  if (isOpened) {
+    document.addEventListener('click', handleOutsideClick);
+  } else {
+    document.removeEventListener('click', handleOutsideClick);
   }
 });
