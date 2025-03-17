@@ -26,12 +26,12 @@
     <script type="module" crossorigin src="/stp-8306/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/stp-8306/assets/vendor-5c298792.js">
     <link rel="stylesheet" href="/stp-8306/assets/vendor-24abd9de.css">
-    <link rel="stylesheet" href="/stp-8306/assets/styles-d47ea318.css">
+    <link rel="stylesheet" href="/stp-8306/assets/styles-aa3b9df1.css">
   </head>
   <body>
     <header class="header">
-  <div class="header__container blured">
-    <a class="header__logo" href="./">
+  <div class="header__container blured" id="header__container-js">
+    <a class="header__logo" id="header__logo-js" href="./">
       <img
         src="/stp-8306/assets/logo-40722753.png"
         alt="Game's Logo"
@@ -39,13 +39,47 @@
       />
     </a>
 
-    <button class="header__burger" id="burger-button" type="button">
-      <svg class="icon-burger" width="32" height="22" fill="currentColor">
-        <use href="/stp-8306/assets/sprite-75540f03.svg#icon-burger-btn"></use>
+    <button class="header__burger" id="burger-btn-js" type="button">
+      <svg class="icon-burger" width="30" height="20" fill="currentColor">
+        <use href="/stp-8306/assets/sprite-cb0969f9.svg#icon-burger-btn"></use>
       </svg>
     </button>
 
-    <!-- <div class="header__nav-wrapper"> -->
+    <nav class="mob-menu__nav" id="mob-menu__nav-js">
+      <ul class="mob-menu__list">
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#benefits"
+            >Benefits</a
+          >
+        </li>
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#description"
+            >Game Description</a
+          >
+        </li>
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#gallery"
+            >Gallery</a
+          >
+        </li>
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#"
+            >Key Features</a
+          >
+        </li>
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#characters"
+            >Main Characters Description</a
+          >
+        </li>
+        <li class="mob-menu__nav-item">
+          <a class="mob-menu__nav-link title black-stroke" href="#reviews"
+            >Reviews</a
+          >
+        </li>
+      </ul>
+    </nav>
+
     <nav class="header__nav" id="header-nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
@@ -72,7 +106,6 @@
         </li>
       </ul>
     </nav>
-    <!-- </div> -->
   </div>
 </header>
 
@@ -123,7 +156,7 @@
         <span class="span-google">Google Play</span>
       </div>
       <svg class="icon-loader" width="24" height="25" fill="currentColor">
-        <use href="/stp-8306/assets/sprite-75540f03.svg#icon-arrow-load"></use>
+        <use href="/stp-8306/assets/sprite-cb0969f9.svg#icon-arrow-load"></use>
       </svg>
     </a>
   </div>
@@ -423,8 +456,6 @@
   <p class="footer-text">All rights reserved gamestormpath.com | 2025</p>
 </footer>
 
-
-    <div class="mob-menu">MOB MENU</div>
 
     <div class="cookie-modal">
   <div class="cookie-modal-content">
