@@ -18,7 +18,7 @@ const closeMenu = () => {
   toggleBodyScroll(false);
 
   const iconMenu = document.querySelector('.icon-burger use');
-  iconMenu.setAttribute('href', '/sprite.svg#icon-burger-btn');
+  iconMenu.setAttribute('href', '/stp-8306/public/sprite.svg#icon-burger-btn');
   // iconMenu.;
 };
 
