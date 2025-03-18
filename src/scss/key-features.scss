@@ -39,7 +39,7 @@
       width: 56px;
       height: 56px;
       z-index: 1;
-      background: url('../img/star.png') no-repeat center/contain;
+      background: url('/img/star.png') no-repeat center/contain;
     }
 
     &::after {
@@ -51,9 +51,6 @@
       font-size: 8px;
       color: #79375f;
       z-index: 1;
-    }
-
-    @include media(desktop) {
     }
   }
 
@@ -102,7 +99,7 @@
     font-family: inherit;
     transition: padding $_transition-duration ease-in-out;
     position: relative;
-    z-index: 2;
+    z-index: 1;
   }
   &__item.openedBlock .key-features__button {
     padding-top: 48.5px;
@@ -128,7 +125,7 @@
   }
   &__item.openedBlock .key-features__text {
     transform: translateY(0);
-    z-index: 1;
+    z-index: 0;
     opacity: 1;
   }
 

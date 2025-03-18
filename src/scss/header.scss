@@ -21,6 +21,7 @@
   padding-inline: 16px;
   position: fixed;
   z-index: 5;
+  transition: height $_transition-duration ease-in-out;
 
   @include media(desktop) {
     width: 1200px;
@@ -39,7 +40,7 @@
     background: rgba(206, 206, 206, 0.2);
     overflow: hidden;
     position: relative;
-    transition: all $_transition-duration ease-in-out;
+    transition: height $_transition-duration ease-in-out;
 
     @include media(desktop) {
       height: 80px;
@@ -114,12 +115,15 @@
   right: 0;
   z-index: -1;
   transform: translateY(100%);
-  transition: transform $_transition-duration ease-in-out;
+  opacity: 0;
+  transition: transform $_transition-duration ease-in-out,
+    opacity $_transition-duration ease-in-out;
   padding-bottom: 12.5px;
 }
 
 .header__container.opened .mob-menu__nav {
   transform: translateY(0);
+  opacity: 1;
 }
 
 .mob-menu__list {
