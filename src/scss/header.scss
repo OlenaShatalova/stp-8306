@@ -91,7 +91,7 @@
     padding: 14px 0;
     font-weight: 500;
     @include font(16, 24);
-    transition: all $_transition-duration ease-in-out;
+    transition: color $_transition-duration ease-in-out;
 
     &:hover {
       color: $_light-blue;
@@ -132,10 +132,6 @@
   display: grid;
   gap: 8px;
   justify-items: end;
-  transition: all $_transition-duration ease-in-out;
-}
-.mob-menu__nav-item {
-  transition: all $_transition-duration ease-in-out;
 }
 
 .mob-menu__nav-link.title {
@@ -143,7 +139,7 @@
   height: 32px;
   font-size: 18px;
   padding-inline: 15px;
-  transition: all $_transition-duration ease-in-out;
+  transition: background-color $_transition-duration ease-in-out;
 
   &:hover {
     background-color: $_light-blue;
