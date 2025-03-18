@@ -1,95 +1,147 @@
 .key-features {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-inline: 2px;
 
-  &__title {
-    font-size: 30px;
-    margin-bottom: 24px;
-    width: 241px;
-    height: 58px;
-    margin: 0 auto 24px; // Центруємо заголовок та додаємо відступ
-    text-align: center; // Центруємо заголовок
+  @include media(to-desktop) {
+    text-align: center;
+  }
+
+  &__contain {
+    display: flex;
+    gap: 152px;
   }
 
   &__blue-block {
-    background-color: #4462c1;
-    padding: 30px;
-    border-radius: 12px;
-    width: 424px;
-    height: 816px; // Початкова висота синього блоку
-    transition: height 0.3s ease; // Додаємо анімацію для зміни висоти
-    border-radius: 12px;
+    height: auto;
+    width: 100%;
+    background-color: $_dark-blue;
+    padding: 39px 10px 16px 10px;
+    border: 1px solid $_dark-yellow;
+    border-radius: 16px;
+    transition: height 0.3s ease;
+
+    @include media(desktop) {
+      width: 424px;
+      padding: 80px;
+    }
   }
 
   &__list {
-    width: 100%;
-    margin-bottom: 30px;
+    display: grid;
+    gap: 18px;
+    position: relative;
+
+    &::before {
+      content: '';
+      color: $_black;
+      position: absolute;
+      top: -25px;
+      left: 0;
+      width: 56px;
+      height: 56px;
+      z-index: 1;
+      background: url('../img/star.png') no-repeat center/contain;
+    }
+
+    &::after {
+      content: 'Tap';
+      position: absolute;
+      top: 0px;
+      left: 21px;
+      font-weight: 600;
+      font-size: 8px;
+      color: #79375f;
+      z-index: 1;
+    }
+
+    @include media(desktop) {
+    }
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 15px;
+    width: 264px;
+    height: 75px;
+    border-radius: 16px;
+    background: $_light_yellow;
+    position: relative;
+    overflow: hidden;
+    transition: height $_transition-duration ease-in-out;
+
+    &.openedBlock {
+      height: 208px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(98px - 15%);
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $_dark-yellow;
+      opacity: 0;
+      transition: top $_transition-duration ease-in-out,
+        opacity $_transition-duration ease-in-out;
+    }
+  }
+  &__item.openedBlock::before {
+    top: 98px;
+    opacity: 1;
   }
 
   &__button {
-    width: 264px;
-    height: 98px;
-    padding: 20px;
-    background-color: #edebae;
-    color: #4462c1;
+    width: 100%;
+    height: inherit;
+    padding: 25.5px 17px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background: none;
     border: none;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 12px;
-    font-size: 18px;
-    font-family: 'Roboto', sans-serif;
-    transition: height 0.3s ease;
+    color: $_dark-blue;
+    @include font(16, 24);
+    font-family: inherit;
+    transition: padding $_transition-duration ease-in-out;
+    position: relative;
+    z-index: 2;
+  }
+  &__item.openedBlock .key-features__button {
+    padding-top: 48.5px;
   }
 
   &__text {
-    display: none;
-    padding: 20px;
-    background-color: #4462c1;
-    color: #edebae;
-    border-radius: 12px;
-    margin-top: 10px;
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-
-    &.active {
-      display: block;
-    }
+    position: absolute;
+    top: 98px;
+    z-index: -1;
+    transform: translateY((-35%));
+    opacity: 0;
+    transition: transform $_transition-duration ease-in-out,
+      opacity $_transition-duration ease-in-out,
+      z-index $_transition-duration ease-in-out;
+    padding-inline: 17px;
+    padding-top: 5px;
+    text-align: left;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    color: $_dark-blue;
+    @include font(16, 24);
+  }
+  &__item.openedBlock .key-features__text {
+    transform: translateY(0);
+    z-index: 1;
+    opacity: 1;
   }
 
-  &__divider {
-    border: 1px solid #f5b000;
-    margin-bottom: 10px;
-  }
-
+  /// зображення
   &__image {
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
+    width: 100%;
+    height: 100%;
 
-  @media (min-width: 2000px) {
-    padding-top: 80px;
-    padding-bottom: 80px;
-
-    &__blue-block {
-      display: flex;
+    @include media(to-desktop) {
+      display: none;
     }
 
-    &__list {
-      width: 50%;
-      margin-right: 30px;
-    }
-
-    &__image {
-      width: 50%;
+    @include media(desktop) {
     }
   }
 }

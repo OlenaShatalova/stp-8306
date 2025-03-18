@@ -1,5 +1,7 @@
 .characters-section {
-  text-align: center;
+  @include media(to-desktop) {
+    text-align: center;
+  }
 
   @include media(desktop) {
     position: relative;
@@ -12,9 +14,8 @@
       top 48px right 42px;
   }
   50% {
-    background-position: bottom 63px left 94px,
-      /* Трохи вгору і вліво */ top 191px right 290px,
-      /* Трохи вниз і вправо */ top 48px right 62px; /* Трохи вниз і вліво */
+    background-position: bottom 63px left 94px, top 191px right 290px,
+      top 48px right 62px;
   }
   100% {
     background-position: bottom 53px left 114px, top 171px right 270px,
@@ -41,6 +42,7 @@
     }
   }
 }
+
 .characters-list {
   display: grid;
   gap: 24px;
@@ -55,7 +57,12 @@
   border-radius: 16px;
   background: #f5f5f5;
   padding: 16px;
-  padding-right: 54px;
+  padding-right: 22px;
+  text-align: start;
+
+  @include media(desktop) {
+    padding-right: 54px;
+  }
 }
 
 .character-name {
@@ -86,6 +93,12 @@
 .character-item:not(:nth-child(1)) {
   @include media(desktop) {
     padding-right: 64px;
+  }
+}
+
+.character-item:nth-child(3) {
+  @include media(desktop) {
+    padding-right: 108px;
   }
 }
 

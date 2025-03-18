@@ -1,15 +1,3 @@
-.home-section.section {
-  padding-top: 30px;
-
-  @include media(desktop) {
-    padding-top: 40px;
-    display: grid;
-    align-items: flex-start;
-    grid-template-columns: 702px 1fr;
-    position: relative;
-  }
-}
-
 @keyframes moveHeaderStars {
   0% {
     background-position: bottom 34px left 394px, bottom 1px right 394px,
@@ -25,9 +13,40 @@
   }
 }
 
+@keyframes pulse {
+  0%,
+  20%,
+  40%,
+  60% {
+    transform: scale(1);
+  }
+  10%,
+  30%,
+  50% {
+    transform: scale(1.1);
+  }
+  60%,
+  100% {
+    transform: scale(1);
+  }
+}
+
+.home-section.section {
+  padding-top: 30px;
+
+  @include media(desktop) {
+    padding-top: 40px;
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 702px 1fr;
+    position: relative;
+  }
+}
+
 .home-background {
   @include media(desktop) {
     position: absolute;
+    z-index: -1;
     inset: 0;
     width: 100%;
     height: 100%;
@@ -98,19 +117,20 @@
   height: 72px;
   padding: 16px;
   background: $_light-blue;
+  animation: pulse 6s infinite;
 
   @include media(desktop) {
     width: 238px;
   }
-}
 
-.google-link:hover {
-  background-color: #4462c1;
-  box-shadow: 0 1px 4px 0 rgba(39, 37, 37, 0.7);
-}
+  &:hover {
+    background-color: $_dark-blue;
+    box-shadow: 0 1px 4px 0 rgba(39, 37, 37, 0.7);
+  }
 
-.google-link:active {
-  opacity: 0.5;
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .icon-loader {
