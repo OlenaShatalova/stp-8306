@@ -41,7 +41,8 @@
     overflow: hidden;
     position: relative;
     transition: height $_transition-duration ease-in-out,
-      border $_transition-duration ease-in-out;
+      border $_transition-duration ease-in-out,
+      padding $_transition-duration ease-in-out;
 
     @include media(desktop) {
       height: 80px;
