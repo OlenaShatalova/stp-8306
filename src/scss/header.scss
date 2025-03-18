@@ -130,6 +130,7 @@
   display: grid;
   gap: 8px;
   justify-items: end;
+  transition: all $_transition-duration ease-in-out;
 }
 
 .mob-menu__nav-link.title {
@@ -137,6 +138,7 @@
   height: 32px;
   font-size: 18px;
   padding-inline: 15px;
+  transition: all $_transition-duration ease-in-out;
 
   &:hover {
     background-color: $_light-blue;
@@ -154,5 +156,5 @@
 }
 
 .icon-burger-btn {
-  width: 1.4541015625em;
+  width: 1.45em;
 }
