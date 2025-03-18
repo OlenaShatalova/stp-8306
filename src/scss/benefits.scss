@@ -14,6 +14,7 @@
   @include media(desktop) {
     padding: 24px;
     grid-template-columns: 386px 386px;
+    gap: 56px;
     justify-content: space-between;
     position: relative;
   }
@@ -83,6 +84,7 @@
   color: $_black;
   display: grid;
   align-items: center;
+
   @include media(desktop) {
     height: 48px;
   }
@@ -93,4 +95,20 @@
   padding-bottom: 5px;
   text-align: left;
   font-size: 20px;
+
+  @include media(desktop) {
+    font-size: 24px;
+  }
+}
+
+.benefits-grid-item:nth-child(odd) .benefits-text {
+  @include media(desktop) {
+    padding-inline: 25px 35px;
+  }
+}
+
+.benefits-grid-item:nth-child(even) .benefits-text {
+  @include media(desktop) {
+    padding-inline: 35px 25px;
+  }
 }
