@@ -40,7 +40,8 @@
     background: rgba(206, 206, 206, 0.2);
     overflow: hidden;
     position: relative;
-    transition: height $_transition-duration ease-in-out;
+    transition: height $_transition-duration ease-in-out,
+      border $_transition-duration ease-in-out;
 
     @include media(desktop) {
       height: 80px;
@@ -114,7 +115,7 @@
   bottom: 0;
   right: 0;
   z-index: -1;
-  transform: translateY(100%);
+  transform: translateX(110%);
   opacity: 0;
   transition: transform $_transition-duration ease-in-out,
     opacity $_transition-duration ease-in-out;
@@ -122,7 +123,7 @@
 }
 
 .header__container.opened .mob-menu__nav {
-  transform: translateY(0);
+  transform: translateX(0);
   opacity: 1;
 }
 
@@ -130,6 +131,9 @@
   display: grid;
   gap: 8px;
   justify-items: end;
+  transition: all $_transition-duration ease-in-out;
+}
+.mob-menu__nav-item {
   transition: all $_transition-duration ease-in-out;
 }
 
